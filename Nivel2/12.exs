@@ -1,15 +1,15 @@
 # 12. Agregue un elemento a una lista ordenada, en el lugar que le corresponda.
 defmodule Elemento do
   def agregar([], elem) do
-    []
+    [elem]
   end
 
   def agregar([hd | tl], elem) when elem < hd do
-    [elem, hd]
+    [elem, hd | tl]
   end
 
   def agregar([hd | tl], elem) do
-    [hd | agregar(tail, n < n + 1, elem)]
+    [hd | agregar(tl, elem)]
   end
 end
 
